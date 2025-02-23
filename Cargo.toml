@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+burn = "0.16"
+burn-ndarray = "0.16"
+burn-autodiff = "0.16"
+rand = "0.8"  # Add this line
