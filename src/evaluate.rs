@@ -12,7 +12,6 @@ pub fn evaluate_model<B: Backend>(
     // Compute Mean Squared Error (MSE)
     let mse = (predictions - y_test).powf(2.0).mean();
 
-
     // Print evaluation result
     println!("Mean Squared Error: {:?}", mse);
 
