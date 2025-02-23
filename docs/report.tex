@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}  % For adding images if needed
+\usepackage{amsmath}   % For mathematical expressions
+\usepackage{hyperref}  % For clickable links
+\usepackage{listings}  % For including code snippets
+
+\title{Linear Regression in Rust using Burn}
+\author{Hlulani}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This report documents the implementation of a linear regression model using Rust and the Burn library. The objective was to predict $y = 2x + 1$ using synthetic data. The project was developed in Rust Rover IDE, with version control handled via GitHub.
+
+\section{Help Received}
+Several resources were utilized to complete this project:
+\begin{itemize}
+    \item \textbf{Burn Library Documentation:} \url{https://docs.rs/burn/0.16.0/burn/}
+    \item \textbf{Rust Language Documentation:} \url{https://doc.rust-lang.org/}
+    \item \textbf{GitHub Guide:} \url{https://docs.github.com/en/get-started}
+    \item \textbf{Rust Rover Documentation:} \url{https://www.jetbrains.com/help/rust/}
+    \item \textbf{AI Assistance:} Used for debugging, fixing errors, and structuring the project.
+\end{itemize}
+
+\section{Challenges Faced}
+\begin{enumerate}
+    \item \textbf{Tensor Type Mismatch:} Encountered errors related to expected tensor types (e.g., f64 vs Tensor$\langle B,2\rangle$).
+    \item \textbf{Optimizer Issues:} `Sgd::new()` function was not found in Burn 0.16.0, requiring a workaround.
+    \item \textbf{Training Issues:} The model did not train correctly, as the loss did not decrease as expected.
+    \item \textbf{Git Push Rejection:} The repository required a `git pull --rebase` before pushing updates.
+\end{enumerate}
+
+\section{Lessons Learned}
+Despite not achieving a fully working model, I gained valuable experience:
+\begin{itemize}
+    \item Understanding Rust's strict type system and ownership rules.
+    \item The importance of reading API documentation carefully before implementing functions.
+    \item Debugging tensor operations and ensuring proper type conversions.
+    \item Using Git version control effectively for managing changes.
+\end{itemize}
+
+\section{Conclusion}
+While the project did not fully succeed, it provided critical insights into implementing machine learning models using Rust and Burn. Further improvements are needed to correctly train and evaluate the model. Future work will focus on fixing tensor issues, refining the optimizer usage, and improving training convergence.
+
+\end{document}
